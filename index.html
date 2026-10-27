@@ -1,0 +1,344 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101827">
+<meta name="description" content="Discover GAMMA — an independent vision for AI, robotics, smart communities and future technology.">
+<title>GAMMA | Engineering Tomorrow</title>
+
+<style>
+:root {
+  --bg: #0b1220;
+  --panel: #111d30;
+  --text: #f3f6fc;
+  --muted: #a9b6ca;
+  --blue: #60a5fa;
+  --cyan: #67e8f9;
+  --border: #26364c;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 85px; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.65;
+}
+a { color: inherit; text-decoration: none; }
+.wrap { width: min(1120px, 90%); margin: auto; }
+header {
+  position: sticky; top: 0; z-index: 10;
+  background: rgba(11,18,32,.94);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+nav {
+  min-height: 72px; display: flex; align-items: center;
+  justify-content: space-between; gap: 18px;
+}
+.logo { font-size: 1.65rem; font-weight: 850; letter-spacing: 3px; }
+.logo span { color: var(--cyan); }
+.navlinks { display: flex; flex-wrap: wrap; gap: 20px; }
+.navlinks a { color: var(--muted); font-size: .9rem; }
+.navlinks a:hover { color: var(--cyan); }
+.hero {
+  padding: 100px 0 85px;
+  background:
+    radial-gradient(ellipse at 80% 20%, #17436b66, transparent 42%),
+    radial-gradient(ellipse at 10% 90%, #164e6380, transparent 38%);
+}
+.eyebrow {
+  color: var(--cyan); font-size: .78rem;
+  letter-spacing: 3px; font-weight: 750;
+}
+h1 {
+  max-width: 850px; margin: 18px 0;
+  font-size: clamp(2.8rem, 9vw, 5.6rem);
+  line-height: 1.06; letter-spacing: -3px;
+}
+h1 span {
+  background: linear-gradient(90deg, var(--cyan), var(--blue));
+  color: transparent; background-clip: text;
+}
+.lead { max-width: 650px; color: var(--muted); font-size: 1.12rem; }
+.actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px; }
+.btn {
+  display: inline-block; padding: 12px 20px;
+  border: 1px solid var(--border); border-radius: 8px;
+  font-weight: 700; cursor: pointer;
+}
+.btn.primary { background: #dff7ff; color: #102033; border-color: #dff7ff; }
+.btn:hover { transform: translateY(-2px); }
+section { padding: 72px 0; }
+.section-top { max-width: 700px; margin-bottom: 32px; }
+h2 { font-size: clamp(1.9rem, 5vw, 2.8rem); line-height: 1.2; margin: 10px 0; }
+h3 { margin: 12px 0 8px; }
+.muted { color: var(--muted); }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 245px), 1fr));
+  gap: 16px;
+}
+.card {
+  background: linear-gradient(145deg, #142239, #0e192a);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 23px;
+  transition: border-color .2s, transform .2s;
+}
+.card:hover { border-color: #438bb9; transform: translateY(-3px); }
+.symbol {
+  width: 46px; height: 46px; display: grid; place-items: center;
+  border: 1px solid #31526d; background: #17314b;
+  border-radius: 12px; color: var(--cyan);
+  font-weight: 850; font-size: 1.05rem;
+}
+.tag {
+  display: inline-block; margin-top: 15px; color: var(--cyan);
+  font-size: .72rem; letter-spacing: 1px; text-transform: uppercase;
+}
+.about-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 18px;
+}
+.about-box {
+  padding: 25px; border-left: 2px solid var(--cyan);
+  background: #101c2d; border-radius: 0 12px 12px 0;
+}
+.banner {
+  background: linear-gradient(120deg, #163957, #111d30 75%);
+  border: 1px solid #2c4e69; border-radius: 18px;
+  padding: clamp(25px, 6vw, 48px);
+}
+.banner p { max-width: 680px; }
+.contact-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+footer { border-top: 1px solid var(--border); padding: 26px 0; }
+footer .wrap {
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px;
+}
+.small { font-size: .85rem; color: var(--muted); }
+@media (max-width: 600px) {
+  nav { align-items: flex-start; flex-direction: column; padding: 13px 0; }
+  .navlinks { gap: 12px; }
+  .hero { padding: 68px 0; }
+  h1 { letter-spacing: -1.5px; }
+  section { padding: 55px 0; }
+}
+</style>
+</head>
+
+<body>
+<header>
+  <nav class="wrap">
+    <a class="logo" href="#home" aria-label="GAMMA home">GAM<span>MA</span></a>
+    <div class="navlinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#vision">Vision</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="wrap">
+      <div class="eyebrow">INDEPENDENT TECHNOLOGY VISION</div>
+      <h1>Engineering <span>Tomorrow.</span></h1>
+      <p class="lead">
+        One vision. Many innovations. A smarter world.
+        GAMMA is a growing technology initiative exploring
+        artificial intelligence, robotics, intelligent environments
+        and solutions designed around real human needs.
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="#projects">Explore Our Projects ↗</a>
+        <a class="btn" href="#about">Discover GAMMA</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="section-top">
+        <div class="eyebrow">01 / ABOUT US</div>
+        <h2>A vision beyond a single invention.</h2>
+        <p class="muted">
+          GAMMA brings multiple technology ideas together under one
+          long-term vision: build useful, responsible and innovative
+          solutions for everyday life, communities, education and industry.
+        </p>
+      </div>
+      <div class="about-grid">
+        <div class="about-box">
+          <h3>Our Mission</h3>
+          <p class="muted">Explore and develop practical technology that helps people solve real-world problems.</p>
+        </div>
+        <div class="about-box">
+          <h3>Our Approach</h3>
+          <p class="muted">Start with ideas, build prototypes, test them, learn from results and improve continuously.</p>
+        </div>
+        <div class="about-box">
+          <h3>Our Future</h3>
+          <p class="muted">Connect intelligent software, hardware and human-centred services into a broader ecosystem.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <div class="section-top">
+        <div class="eyebrow">02 / OUR ECOSYSTEM</div>
+        <h2>Ideas becoming possibilities.</h2>
+        <p class="muted">
+          Explore the projects envisioned under GAMMA. Each project
+          can develop at its own pace, from concept to prototype and beyond.
+          The descriptions below represent project goals, not claims of
+          completed or commercially available products.
+        </p>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <div class="symbol">AI</div>
+          <h3>GAMMA OMNIX</h3>
+          <p class="muted">An AI assistant initiative, beginning with existing AI services and aiming toward custom GAMMA intelligence.</p>
+          <span class="tag">Artificial Intelligence</span>
+        </article>
+
+        <article class="card">
+          <div class="symbol">360</div>
+          <h3>GAMMA SOCIETY 360</h3>
+          <p class="muted">A smart community platform concept for monitoring resources, identifying problems and coordinating alerts and responses.</p>
+          <span class="tag">Smart Communities</span>
+        </article>
+
+        <article class="card">
+          <div class="symbol">SOS</div>
+          <h3>GAMMA SOS</h3>
+          <p class="muted">An assistance network concept connecting requests for help with suitable rovers and human responders.</p>
+          <span class="tag">Robotics & Assistance</span>
+        </article>
+
+        <article class="card">
+          <div class="symbol">LC</div>
+          <h3>GAMMA LIFECORE</h3>
+          <p class="muted">An intelligent control system concept connecting devices, sensors and workflows across homes, schools and facilities.</p>
+          <span class="tag">Automation</span>
+        </article>
+
+        <article class="card">
+          <div class="symbol">SH</div>
+          <h3>GAMMA SMART SCHOOL HUB</h3>
+          <p class="muted">An AI-assisted school hub concept combining a mobile rover, voice interaction, vision and school-support tools.</p>
+          <span class="tag">Education & Robotics</span>
+        </article>
+
+        <article class="card">
+          <div class="symbol">FG</div>
+          <h3>GAMMA FAMILYGUARD</h3>
+          <p class="muted">A consent-based family safety concept with optional location sharing, family groups and arrival alerts.</p>
+          <span class="tag">Family Safety</span>
+        </article>
+
+        <article class="card">
+          <div class="symbol">NX</div>
+          <h3>GAMMA NEXORA</h3>
+          <p class="muted">Ideas for smarter large-scale facilities, including resorts, airports and connected infrastructure.</p>
+          <span class="tag">Smart Facilities</span>
+        </article>
+
+        <article class="card">
+          <div class="symbol">NM</div>
+          <h3>GAMMA NEXTMOTIVE</h3>
+          <p class="muted">A future-mobility initiative exploring new vehicle concepts and intelligent transport experiences.</p>
+          <span class="tag">Mobility</span>
+        </article>
+
+        <article class="card">
+          <div class="symbol">NW</div>
+          <h3>GAMMA NEXWEAR</h3>
+          <p class="muted">Advanced wearable technology concepts, including future smart accessories and connected devices.</p>
+          <span class="tag">Wearable Technology</span>
+        </article>
+
+        <article class="card">
+          <div class="symbol">OS</div>
+          <h3>GAMMA OMNIX STUDIO</h3>
+          <p class="muted">A planned creative and productivity workspace concept for documents, design and AI-assisted work.</p>
+          <span class="tag">Creative Technology</span>
+        </article>
+
+        <article class="card">
+          <div class="symbol">OS+</div>
+          <h3>GAMMA OS</h3>
+          <p class="muted">A unified device-experience concept exploring AI assistance, everyday tools and connected-device control.</p>
+          <span class="tag">Software & Ecosystems</span>
+        </article>
+
+        <article class="card">
+          <div class="symbol">R</div>
+          <h3>GAMMA ROVER</h3>
+          <p class="muted">A robotics concept for navigating to assistance requests. Future deployment would require safety testing and appropriate supervision.</p>
+          <span class="tag">Robotics</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="vision">
+    <div class="wrap">
+      <div class="banner">
+        <div class="eyebrow">03 / THE VISION</div>
+        <h2>Technology should make a difference.</h2>
+        <p class="muted">
+          From smarter schools to more responsive communities, GAMMA's
+          long-term ambition is to explore how connected technology can
+          help people, use resources responsibly and make everyday systems
+          work better.
+        </p>
+        <a class="btn primary" href="#contact">Connect with GAMMA ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="section-top">
+        <div class="eyebrow">04 / CONTACT</div>
+        <h2>Every great idea starts somewhere.</h2>
+        <p class="muted">
+          Interested in GAMMA's projects, prototypes or future direction?
+          Get in touch using an official contact address once you have one.
+        </p>
+      </div>
+      <div class="card">
+        <h3>GAMMA — Engineering Tomorrow</h3>
+        <p class="muted">
+          Contact details will be published here when the official
+          company contact channel is ready.
+        </p>
+        <!-- Add a real public contact email here when available. -->
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="logo" href="#home">GAM<span>MA</span></a>
+    <span class="small">An independent technology initiative.</span>
+    <span class="small">© <span id="year"></span> GAMMA</span>
+  </div>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
